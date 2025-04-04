@@ -71,7 +71,17 @@ export default function Game() {
   const moves = history.map((squares, move) => {
     let description;
     if (move > 0) {
-      description = 'Go to move #' + move;
+      const prevSquares = history[move - 1];
+      let moveLocation = '';
+      for (let i = 0; i < squares.length; i++) {
+        if (squares[i] !== prevSquares[i]) {
+          const col = (i % 3) + 1;
+          const row = Math.floor(i / 3) + 1;
+          moveLocation = ` (${col}, ${row})`;
+          break;
+        }
+      }
+      description = `Go to move #${move}${moveLocation}`;
     } else {
       description = 'Go to game start';
     }
@@ -80,7 +90,7 @@ export default function Game() {
         <button onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
-  });
+  });  
 
   return (
     <div className="game">
