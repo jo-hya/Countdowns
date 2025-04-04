@@ -57,18 +57,19 @@
   }
   
   .square {
-    background: #fff;
-    border: 1px solid #999;
+    color: #000000;
+    background: #d2adad;
+    border: 20px solid #761212;
     float: left;
-    font-size: 24px;
+    font-size: 100px;
     font-weight: bold;
-    line-height: 34px;
-    height: 34px;
+    line-height: 50px;
+    height: 200px;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 34px;
+    width: 200px;
   }
   
   .board-row:after {
@@ -78,6 +79,8 @@
   }
   
   .status {
+    font-size: 50px;
+    font-weight: bold;
     margin-bottom: 10px;
   }
   .game {
@@ -86,6 +89,18 @@
   }
   
   .game-info {
+    font-size: 20px;
+    font-weight: bold;
     margin-left: 20px;
   }
-  
+
+  .game-info button {
+    background-color: #d2adad;
+    border: 10px solid #761212;
+    border-radius: 4px;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px 16px;
+    margin: 4px 0;
+  }
